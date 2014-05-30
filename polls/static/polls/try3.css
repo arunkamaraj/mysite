@@ -1,0 +1,90 @@
+body { font-family: Arial, Helvetica, sans-serif; background-repeat: no-repeat; } 
+.container {  
+        width: 1000px;  
+        margin: 0 auto;   
+    }  
+  
+body, div, h1, h2, h3, h4, h5, h6, p, ul, img {margin:0px; padding:0px; } 
+
+ h1 {  
+    text-indent: -9999px;
+    }
+
+header {  
+    padding-top: 40px;   
+       }  
+
+#tagline h3{
+	padding-bottom : -50px;
+	font-size: -35px;
+}
+
+
+
+ul#menu {  
+    list-style: none;   
+}  
+  
+ul#menu li a {  
+    font-size: 35px;  
+    color: #676666;  
+    text-decoration: none;
+}   
+
+ul#menu li {  
+        float: left;   
+    } 
+
+ul#menu {  
+        list-style: none;  
+        padding-top: 165px;   
+    }  
+      
+ul#menu li {  
+        float: left;  
+        padding-left: 30px;
+	padding-right: 30px;   
+ }
+
+form {
+    padding-top : 90px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+label, input {
+    /* in order to define widths */
+    display: inline-block;
+}
+
+label {
+    width: 30%;
+    /* positions the label text beside the input */
+    text-align: right;
+    padding-left : 20px;
+}
+
+label + input {
+    width: 30%;
+    /* large margin-right to force the next element to the new-line
+       and margin-left to create a gutter between the label and input */
+    margin: 0 30% 0 4%;
+}
+
+/* only the submit button is matched by this selector,
+   but to be sure you could use an id or class for that button */
+input + input {
+    float: right;
+}
+
+
+
+
+
+
+
+
+       
+
+   
+

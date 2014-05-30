@@ -1,0 +1,53 @@
+{% load staticfiles %}
+<html>
+<head>
+    <title>Search</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/try4.css' %}" />
+</head>
+<body background="{% static "polls/img.png" %}" >
+    <div id="main">
+            <div class="container">
+                <div id="header">
+                    <div id="logo">
+                        <h1>Logo</h1>
+                    </div>
+                    <div id="tagline">
+                        <h3>Lending Stream </h3>
+                    </div>
+                    <ul id="menu">
+                        <li><a href="/polls/base">Home</a></li>
+                        <li><a href="/polls/contact">insert</a></li>
+                        <li><a href="/polls/search-form">search</a></li>
+                        <li><a href="/polls/thanks">Contact</a></li>
+                    </ul>
+                </div><!--end header -->
+	    </div><!--end container-->
+    </div><!--end main-->
+
+    <p>You searched for agreement_no : <strong>{{ query }}</strong></p>
+
+    {% if books %}
+	
+         <p>Found {{ books|length }} lead{{ books|pluralize }}.</p>
+         
+         <ul id="inner">
+             {% for book in books %}
+             <p>ID        : {{ book.id }}</p>
+	     <p>agreement : {{ book.aggreement_no }}</p>
+	     <p>Custid    : {{ book.Custid }}</p>
+	     <p>amount    : {{ book.amount }}</p>
+	     <p>mailid    : {{ book.mailid }}</p>
+             {% endfor %}
+	     <form action="/polls/search/" method="get">
+                 <input type="submit" value="Search_again">
+             </form>
+         </ul>
+    {% else %}
+         <p>No agreement_no matched your search criteria.</p>
+         <form action="/polls/search/" method="get">
+             <input type="submit" value="Search_again">
+         </form>
+    {% endif %}
+
+</body>
+</html>
